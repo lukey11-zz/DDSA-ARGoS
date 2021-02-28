@@ -67,6 +67,9 @@ class DSA_loop_functions : public argos::CLoopFunctions {
         argos::Real NestElevation;
         argos::Real SearchRadiusSquared;
 
+	argos::Real FoodBoundsWidth;
+	argos::Real FoodBoundsHeight;
+	
         /* list variables for food & pheromones */
         std::vector<argos::CVector2> FoodList;
 
@@ -85,6 +88,7 @@ class DSA_loop_functions : public argos::CLoopFunctions {
         void RandomFoodDistribution();
         void ClusterFoodDistribution();
         void PowerLawFoodDistribution();
+	void FindClusterLengthWidth();
         bool IsOutOfBounds(argos::CVector2 p, size_t length, size_t width);
         bool IsCollidingWithNest(argos::CVector2 p);
         bool IsCollidingWithFood(argos::CVector2 p);
