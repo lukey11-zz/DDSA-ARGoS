@@ -26,7 +26,7 @@ include(ARGoSCheckQTOpenGL)
 find_package(GSL REQUIRED)
 
 # Find the LUA package.
-find_package(Lua52 REQUIRED)
+find_package(Lua REQUIRED)
 
 # Set ARGoS include directory.
 include_directories(${CMAKE_SOURCE_DIR} ${ARGOS_INCLUDE_DIRS} ${GSL_INCLUDE_DIR} ${LUA_INCLUDE_DIR})

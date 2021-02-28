@@ -2,7 +2,7 @@
 
 DSA_loop_functions::DSA_loop_functions() :
 	RNG(argos::CRandom::CreateRNG("argos")),
-    //MaxSimTime(3600 * GetSimulator().GetPhysicsEngine("default").GetInverseSimulationClockTick()),
+    //MaxSimTime(3600 * GetSimulator().GetPhysicsEngine("dyn2d").GetInverseSimulationClockTick()),
     ResourceDensityDelay(0),
     //RandomSeed(GetSimulator().GetRandomSeed()),
     SimCounter(0),
@@ -35,7 +35,7 @@ DSA_loop_functions::DSA_loop_functions() :
 
 void DSA_loop_functions::Init(TConfigurationNode& node) {
 CSimulator     *simulator     = &GetSimulator();
-  CPhysicsEngine *physicsEngine = &simulator->GetPhysicsEngine("default");
+  CPhysicsEngine *physicsEngine = &simulator->GetPhysicsEngine("dyn2d");
   ticks_per_second = physicsEngine->GetInverseSimulationClockTick();
  argos::TConfigurationNode DDSA_node = argos::GetNode(node, "DDSA");
  argos::GetNodeAttribute(DDSA_node, "PrintFinalScore",                   PrintFinalScore);

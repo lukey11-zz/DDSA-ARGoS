@@ -36,8 +36,8 @@ void DSA_qt_user_functions::DrawOnRobot(CFootBotEntity& entity) {
          * See also the description in
          * $ argos3 -q foot-bot
          */
-        GetOpenGLWidget().renderText(0.0, 0.0, 0.5,             // position
-                                    entity.GetId().c_str()); // text
+        //GetOpenGLWidget().renderText(0.0, 0.0, 0.5,             // position
+        //                            entity.GetId().c_str()); // text
         /* Restore face culling */
         glEnable(GL_CULL_FACE);
         /* Restore lighting */
@@ -91,7 +91,7 @@ void DSA_qt_user_functions::DrawFood() {
 void DSA_qt_user_functions::DrawTargetRays() {
 
 	//size_t tick = loopFunctions.GetSpace().GetSimulationClock();
-	//size_t tock = loopFunctions.GetSimulator().GetPhysicsEngine("default").GetInverseSimulationClockTick() / 8;
+	//size_t tock = loopFunctions.GetSimulator().GetPhysicsEngine("dyn2d").GetInverseSimulationClockTick() / 8;
 
     //if(tock == 0) tock = 1;
 
