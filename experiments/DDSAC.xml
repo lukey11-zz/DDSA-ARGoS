@@ -45,7 +45,8 @@
       <params>
 
 	<!-- Modify TargetDistanceTolerance to Simulate Error -->
-        <settings NumberOfRobots          = "6"
+        <settings ProbTargetDetection    = "0.01"
+	          NumberOfRobots          = "6"
                   NumberOfSpirals         = "30"
                   NestDistanceTolerance = "0.01"  
                   NestAngleTolerance = "0.05"  
@@ -70,7 +71,7 @@
                   label   = "DSA_loop_functions">
 
     <DDSA PrintFinalScore = "1" FoodItemCount = "256"
-	  FoodDistribution = "1"
+	  FoodDistribution = "1" FoodBoundsWidth="10" FoodBoundsHeight="10"
 	  NestRadius = "0.25"
 	  />
 
